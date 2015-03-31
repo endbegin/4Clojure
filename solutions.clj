@@ -483,7 +483,7 @@
     (iterate next-pascal-row coll)))
 
 
-;; 148 TOO SLOW for large numbers!
+;; 148 TOO SLOW for large numbers
 (defn big-divide [num div1 div2]
   (letfn [(divisible? [n] (or (= (rem n div1) 0) (= (rem n div2) 0)))]
     (reduce + (filter divisible? (range 1 num)))))
